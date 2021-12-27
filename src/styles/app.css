@@ -1,0 +1,70 @@
+@keyframes bounce {
+	0%, 100%, 20%, 50%, 80% {
+		-webkit-transform: translateY(0);
+		-ms-transform:     translateY(0);
+		transform:         translateY(0)
+	}
+	40% {
+		-webkit-transform: translateY(-30px);
+		-ms-transform:     translateY(-30px);
+		transform:         translateY(-30px)
+	}
+	60% {
+		-webkit-transform: translateY(-15px);
+		-ms-transform:     translateY(-15px);
+		transform:         translateY(-15px)
+	}
+}
+
+.card:hover {
+  cursor: pointer;
+  animation-name: bounce;
+  -moz-animation-name: bounce;
+}
+
+.card {    
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;    
+    width: 200px;
+    border-radius: 6px;
+}
+.card img{
+   background-color: #f0f0f0;
+   
+   border-radius: 6px;
+}
+.type-pokemon{
+    border: 1px solid white;
+    border-radius: 6px;
+}
+.grass{
+    background-color: #7CFC00;
+}
+.poison{
+    background-color:  	#DA70D6;
+}
+.fire{
+    background-color: #CD5C5C;
+}
+.flying{ 
+    
+    background: linear-gradient( #B0E0E6, #B0E0E6 50%, #8B4513 50%,	#8B4513 0%); 
+}
+.water{
+    background-color: #00a2a2;
+}
+.bug{
+    background-color:#7fca6a;
+}
+.normal{
+    background-color: aliceblue;
+}
+.pokemon-all{
+    margin: 0 auto;
+}
