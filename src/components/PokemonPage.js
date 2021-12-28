@@ -1,14 +1,18 @@
 import { useEffect, useState} from 'react';
 import { useParams } from 'react-router';
 import { API } from "../api";
+import { useNavigate } from "react-router-dom";
 const PokemonPage = () => {
     const { id } = useParams();
     const [pokemon, setPokemon] = useState({});
+    const navigate = useNavigate();
     const pokemonDetails = async () => {
         const res = await API(`https://pokeapi.co/api/v2/pokemon/${id}`);
         setPokemon(res.data);
     }
-    
+    const back2index=()=>{
+        navigate(`/`);
+    }
     useEffect(() => {
         pokemonDetails();
       }, [])
@@ -24,6 +28,7 @@ const PokemonPage = () => {
                 </div>
             </div>
         </div>
+        <button className=" btn btn-primary" onClick={back2index}>Back to index</button>
     </div>);
 }
 export default PokemonPage;
