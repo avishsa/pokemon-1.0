@@ -6,8 +6,7 @@ import {
 } from "react-router-dom";
 import PokemonIndex from "./components/PokemonIndex"
 import PokemonPage from "./components/PokemonPage";
-function App() {
-  debugger;
+function App() {  
   return (<BrowserRouter>
     <Routes>
       <Route exact path="/" element={<PokemonIndex/>} />

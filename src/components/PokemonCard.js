@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const  PokemonCard= ({id,imgSrc,name,types,keyIndex})=>{   
     const navigate = useNavigate(); 
     const goToPokemonPage = () =>{         
-        navigate.push(`/pokemon/${id}`);
+        navigate(`/pokemon/${id}`);
       }
     const getTypesList = ()=>{
         var listTypes = types.map((type,index)=>{return <button key={index} className={`btn type-pokemon ${type.type.name}`}>{type.type.name}</button>});        

@@ -23,16 +23,13 @@ function PokemonIndex() {
   useEffect(() => {
     getBatchPokemons();
   }, [])
-  const onClickCard = ()=>{
-      console.log("move to page")
-  }
+  
   return (
     <div className="App">
       <h1 className="text-center mt-5">Pokedex </h1>
-      <div className="pokemon-container d-flex flex-column align-items-center ">
-        <div className=" pokemon-all d-flex flex-wrap">
-          {allPokemons.map((pokemon, index) => (<PokemonCard
-            onClick={onClickCard}
+      <div className="pokemon-container d-flex flex-column  ">
+        <div className=" pokemon-all d-flex flex-wrap justify-content-center">
+          {allPokemons.map((pokemon, index) => (<PokemonCard            
             key={index}
             keyIndex={index} 
             imgSrc={pokemon.sprites.front_default} 

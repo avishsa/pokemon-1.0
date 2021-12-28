@@ -68,3 +68,8 @@
 .pokemon-all{
     margin: 0 auto;
 }
+@media screen and(max-width: 600px){
+    .load-more{
+        margin: auto 40px
+    }
+}
