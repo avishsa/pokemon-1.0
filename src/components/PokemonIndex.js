@@ -33,7 +33,11 @@ function PokemonIndex() {
         <div className=" pokemon-all d-flex flex-wrap">
           {allPokemons.map((pokemon, index) => (<PokemonCard
             onClick={onClickCard}
-            key={index} imgSrc={pokemon.sprites.front_default} id={pokemon.id} name={pokemon.name} types={pokemon.types} />
+            key={index}
+            keyIndex={index} 
+            imgSrc={pokemon.sprites.front_default} 
+            id={pokemon.id} name={pokemon.name} 
+            types={pokemon.types} />
           ))}
         </div>
         <button className="load-more btn btn-primary" onClick={getBatchPokemons}>load more</button>

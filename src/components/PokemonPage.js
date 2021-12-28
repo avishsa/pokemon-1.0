@@ -1,8 +1,8 @@
 import React from 'react';
-
-const  PokemonPage= ()=>{
-    
-    return (<div> PokemonPage
+import { useParams } from 'react-router';
+const  PokemonPage= ()=>{    
+    const { id } = useParams();
+    return (<div> <h1>PokemonPage {id}</h1>
     </div>);
 }
 export default PokemonPage;
